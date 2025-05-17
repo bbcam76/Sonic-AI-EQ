@@ -1,6 +1,6 @@
 
 # Sonic-AI-EQ
-![Sonic AI EQ](https://raw.githubusercontent.com/bbcam76/Sonic-AI-EQ/main/Sonicai001.jpg)
+![Sonic AI EQ Screenshot](Sonicai001.jpg)
 
 Designing an AI-driven equalizer app involves integrating frontend, backend, AI modeling, and audio processing. Below is a structured end-to-end plan:
 
