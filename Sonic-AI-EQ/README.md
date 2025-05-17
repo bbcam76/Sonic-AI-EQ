@@ -38,11 +38,12 @@ Sonic AI EQ is an AI-driven equalizer application designed to enhance audio qual
 
 ## Directory Structure
 ```
-Sonic-AI-EQ
-├── frontend
-├── backend
-├── ai_model
-└── audio_engine
+Sonic-AI-EQ/
+├── frontend/      # React.js or Flutter frontend code
+├── backend/       # FastAPI/Flask/Node.js backend code
+├── ai_model/      # AI model training/inference code
+├── audio_engine/  # DSP and audio processing code
+└── README.md
 ```
 
 ## Contributing
