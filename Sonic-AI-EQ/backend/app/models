@@ -1,0 +1,30 @@
+# File: /Sonic-AI-EQ/Sonic-AI-EQ/backend/app/models/__init__.py
+# This file is intentionally left blank.
+
+# File: /Sonic-AI-EQ/Sonic-AI-EQ/backend/app/models/audio_model.py
+class AudioModel:
+    def __init__(self, id, title, artist, genre, file_path):
+        self.id = id
+        self.title = title
+        self.artist = artist
+        self.genre = genre
+        self.file_path = file_path
+
+# File: /Sonic-AI-EQ/Sonic-AI-EQ/backend/app/models/equalizer_settings.py
+class EqualizerSettings:
+    def __init__(self, model_id, gains):
+        self.model_id = model_id
+        self.gains = gains  # List of gain values for each frequency band
+
+# File: /Sonic-AI-EQ/Sonic-AI-EQ/backend/app/models/user_feedback.py
+class UserFeedback:
+    def __init__(self, user_id, model_id, rating, comments):
+        self.user_id = user_id
+        self.model_id = model_id
+        self.rating = rating  # e.g., thumbs up or down
+        self.comments = comments  # Optional feedback comments
+
+# File: /Sonic-AI-EQ/Sonic-AI-EQ/backend/app/models/__init__.py
+from .audio_model import AudioModel
+from .equalizer_settings import EqualizerSettings
+from .user_feedback import UserFeedback
