@@ -1,0 +1,10 @@
+backend/
+└── app/
+    ├── __init__.py
+    ├── main.py
+    ├── api/
+    │   ├── __init__.py
+    │   └── upload.py
+    └── services/
+        ├── __init__.py
+        └── file_service.py
