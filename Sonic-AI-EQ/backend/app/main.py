@@ -1,14 +1,25 @@
-from flask import Flask
-from app.api import api_blueprint
+from fastapi import FastAPI, File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
+import shutil
+import os
 
-def create_app():
-    app = Flask(__name__)
+app = FastAPI()
 
-    # Register API blueprint
-    app.register_blueprint(api_blueprint, url_prefix='/api')
+# Allow CORS for frontend development
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Change this to your frontend URL in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-    return app
+UPLOAD_DIR = "uploads"
+os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-if __name__ == '__main__':
-    app = create_app()
-    app.run(debug=True)
+@app.post("/api/upload")
+async def upload_file(file: UploadFile = File(...)):
+    file_location = os.path.join(UPLOAD_DIR, file.filename)
+    with open(file_location, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+    return {"filename": file.filename}

@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import UploadPage from './pages/UploadPage';
-import ResultsPage from './pages/ResultsPage';
 import NotFoundPage from './pages/NotFoundPage';
+import ResultsPage from './pages/ResultsPage';
 
 const App = () => {
     return (
@@ -19,3 +19,4 @@ const App = () => {
 };
 
 export default App;
+
