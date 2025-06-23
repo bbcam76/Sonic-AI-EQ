@@ -1,5 +1,5 @@
 # Sonic-AI-EQ
-![Sonic AI EQ Screenshot](Sonicai001.jpg)
+
 
 Sonic AI EQ is an AI-driven equalizer application designed to enhance audio quality through intelligent equalization settings. This project integrates various components, including a frontend interface, a backend server, AI modeling, and audio processing capabilities.
 
